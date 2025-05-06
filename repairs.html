@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RSS: Repair Forms</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="media/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="media/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="media/favicon/favicon-16x16.png">
+    <link rel="manifest" href="media/favicon/site.webmanifest">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="banner">
+            <img src="media/panther.png" alt="roofing buddy">
+            <h1>Repair Forms</h1>
+        </div>
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="repairs.html">Repair Forms</a></li>
+                <li><a href="installations.html">Installation Forms</a></li>
+                <li><a href="weather.html">Weather Report</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- Repair Form. Originally planned to have multiple nested forms, but ran out of time. -->
+        <form action="mailto:cjknutson684@students.lcstate.edu" class="myForm" method="post" formtarget="_blank" enctype="multipart/form-data">
+            <fieldset>
+                <legend>Repair Inspection Form</legend>
+                <!-- Having trouble allowing touchscreen capability for date element -->
+                <label for="date">Inspection Date:</label>
+                <input type="date" id="date" name="date" required onfocus="(this.type='date')" onblur="(this.type='text')"><br><br>
+                
+                <label for="jobName">Job Name:</label>
+                <input type="text" id="jobName" name="name" required><br><br>
+
+                <label for="address">Repair Address:</label>
+                <textarea id="address" name="address" rows="4" cols="50"></textarea><br><br>
+
+                <div class="radioGroup">
+                    <label for="jobType">Repair Type:</label><br>
+                    <label>
+                        <input type="radio" id="jobType" name="jobType" value="Residential">Residential
+                    </label>
+                    <label>
+                        <input type="radio" id="jobType" name="jobType" value="Commercial">Commercial<br><br>
+                    </label>
+                </div>
+
+                <label for="description">Inspection Notes:</label><br>
+                <textarea id="description" name="description" rows="4" cols="50"></textarea><br><br>
+
+                <label for="upload">Inspection Photos:</label><br>
+                <input type="file" id="upload" name="upload" multiple accept="image/*"><br><br>
+
+                <label for="travel">Estimated Travel (hrs):</label><br>
+                <input type="number" id="travel" name="travel" min="0" max="2" step="0.25"><br><br>
+
+                <label for="labor">Estimated Labor (hrs):</label><br>
+                <input type="number" id="labor" name="labor" min="0" max="8" step="0.25"><br><br>
+
+                <label for="materials">Estimated Materials:</label><br>
+                <textarea name="materials" id="materials" rows="4" cols="50"></textarea><br><br>
+
+                <div class="buttons">
+                <input type="submit" value="Submit" class="button">
+                <input type="reset" value="Reset" class="button">
+                </div>
+            </fieldset>
+        </form>
+        <audio id="ding" src="media/ding.mp3" preload="auto"></audio>
+    </main>
+    <script type="text/javascript" src="app.js"></script>
+    <footer>
+        <div class="footer">
+            <p>&copy; 2025 RSS Forms Portal. All rights reserved.</p>
+            <p>Contact: <a href="mailto:cjknutson684@students.lcstate.edu">Send Email</a></p>
+    </footer>
+</body>
+</html>
