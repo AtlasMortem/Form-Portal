@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RSS: Pre-Site Inspection Form</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="media/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="media/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="media/favicon/favicon-16x16.png">
+    <link rel="manifest" href="media/favicon/site.webmanifest">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="banner">
+            <img src="media/panther.png" alt="roofing buddy">
+            <h1>Pre-Site Inspection</h1>
+        </div>
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="repairs.html">Repair Forms</a></li>
+                <li><a href="installations.html">Installation Forms</a></li>
+                <li><a href="weather.html">Weather Report</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <form action="mailto:">
+            <!-- Pre-Site Inspection Form. This form is filled out by the inspector on site, prior to the start of work. -->
+        <form action="mailto:cjknutson684@students.lcstate.edu" class="myForm" method="post" formtarget="_blank" enctype="multipart/form-data">
+            <fieldset>
+                <legend>Pre-Site Inspection Form</legend>
+                <label for="date">Start Date:</label>
+                <input type="date" id="date" name="date" required onfocus="(this.type='date')" onblur="(this.type='text')"><br>
+                
+                <label for="jobName">Project Name:</label>
+                <input type="text" id="jobName" name="name" list="jobList" required>
+                    <datalist id="jobList">
+                        <!-- Import ProLine job list via API -->
+                    </datalist><br>
+
+                <label for="multiFitJacks"># of Multi-Fit Pipe Jacks (1.5"-3"):</label>
+                <input type="number" id="multiFitJacks" name="multiFitJacks" min="0" step="1"><br>
+
+                <label for="fourJacks"># of Pipe Jacks (4"):</label>
+                <input type="number" id="fourJacks" name="fourJacks" min="0" step="1"><br>
+
+                <label for="garrdals"># of Power Pole Pipe Jacks (Garrdal):</label>
+                <input type="number" id="garrdals" name="garrdals" min="0" step="1"><br>
+
+                <label for="rv49"># of RV 49s:</label>
+                <input type="number" id="rv49" name="rv49" min="0" step="1"><br>
+
+                <div class="radioGroup">
+                    <!-- Spacing for radio buttons seems to be off again. Revisit this in the future. -->
+                    <label for="intakeVent">Adequate Soffit Ventilation (Intake Air):</label>
+                    <label>
+                        <input type="radio" id="intakeVent" name="intakeVent" value="Yes">Yes
+                    </label>
+                    <label>
+                        <input type="radio" id="intakeVent" name="intakeVent" value="No">No<br>
+                    </label>
+                </div>
+                <div class="checklist">
+                    <!-- Need checkboxes to stay inline with labels. How can I fix that? -->
+                     <!-- Should I instead just increase the size of the checkboxes? -->
+                    <label for="ifNoVent">If no, list sections needing ventilation:</label>
+                    <input type="text" id="ifNoVent" name="ifNoVent"><br>
+
+                    <label for="locateOutlets">Locate & Identify <br>Electrical Outlets:</label>
+                    <input type="checkbox" id="locateOutlets" name="locateOutlets" value="Yes"><br>
+
+                    <label for="setupPrep">Prepare Arrival Strategy & <br>Equipment Setup / Parking:</label>
+                    <input type="checkbox" id="setupPrep" name="setupPrep" value="Yes"><br>
+
+                    <label for="yardSign">Display Russell Company<br>Yard Sign:</label>
+                    <input type="checkbox" id="yardSign" name="yardSign" value="Yes"><br>
+
+                    <label for="roofscopeAccuracy">Confirm RoofScope<br>Accuracy:</label>
+                    <input type="checkbox" id="roofscopeAccuracy" name="roofscopeAccuracy" value="Yes"><br>
+
+                    <label for="inspectHome">Inspect & document<br>exterior of home /<br>buildings with complete<br>photos during inspection:</label>
+                    <input type="checkbox" id="inspectHome" name="inspectHome" value="Yes"><br>
+                </div>
+
+                <label for="formSignOff">Pre-Site Inspection Completed by:</label>
+                <input type="text" id="formSignOff" name="formSignOff" required>
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date" onfocus="(this.type='date')" onblur="(this.type='text')"><br>
+
+                <div class="buttons">
+                <input type="submit" value="Submit" class="button">
+                <input type="reset" value="Reset" class="button">
+                </div>
+            </fieldset>
+        </form>
+        <audio id="ding" src="media/ding.mp3" preload="auto"></audio>
+    </main>

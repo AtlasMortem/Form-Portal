@@ -19,7 +19,6 @@
         <nav>
             <ul class="menu">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="repairs.html">Repair Forms</a></li>
                 <li><a href="installations.html">Installation Forms</a></li>
                 <li><a href="weather.html">Weather Report</a></li>
             </ul>
@@ -30,12 +29,14 @@
         <form action="mailto:cjknutson684@students.lcstate.edu" class="myForm" method="post" formtarget="_blank" enctype="multipart/form-data">
             <fieldset>
                 <legend>Repair Inspection Form</legend>
-                <!-- Having trouble allowing touchscreen capability for date element -->
                 <label for="date">Inspection Date:</label>
                 <input type="date" id="date" name="date" required onfocus="(this.type='date')" onblur="(this.type='text')"><br><br>
                 
                 <label for="jobName">Job Name:</label>
-                <input type="text" id="jobName" name="name" required><br><br>
+                <input type="text" id="jobName" name="name" list="jobList" required>
+                    <datalist id="jobList">
+                        <!-- Import ProLine job list via API -->
+                    </datalist><br><br>
 
                 <label for="address">Repair Address:</label>
                 <textarea id="address" name="address" rows="4" cols="50"></textarea><br><br>

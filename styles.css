@@ -142,7 +142,7 @@ footer a {
 
 /* Weather Widget styles */
 .card {
-    width: 90%;
+    width: 80%;
     max-width: 470px;
     background: linear-gradient(135deg, #00feba, #5b548a);
     color: #fff;

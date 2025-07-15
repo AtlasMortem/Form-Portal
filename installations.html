@@ -20,8 +20,8 @@
             <ul class="menu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="repairs.html">Repair Forms</a></li>
-                <li><a href="installations.html">Installation Forms</a></li>
                 <li><a href="weather.html">Weather Report</a></li>
+                <li><a href="pre-site.html">Pre-Site Inspection</a></li>
             </ul>
         </nav>
     </header>
@@ -34,7 +34,10 @@
                 <input type="date" id="date" name="date" required onfocus="(this.type='date')" onblur="(this.type='text')"><br><br>
                 
                 <label for="jobName">Job Name:</label>
-                <input type="text" id="jobName" name="name" required><br><br>
+                <input type="text" id="jobName" name="name" list="jobList" required>
+                    <datalist id="jobList">
+                        <!-- Import ProLine job list via API -->
+                    </datalist><br><br>
 
                 <label for="address">Installation Address:</label>
                 <textarea id="address" name="address" rows="4" cols="50"></textarea><br><br>
