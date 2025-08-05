@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RSS: Pre-Site Inspection Form</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="media/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="media/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="media/favicon/favicon-16x16.png">
+    <link rel="manifest" href="media/favicon/site.webmanifest">
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="https://cdn.weglot.com/weglot.min.js"></script>
+    <script>
+        Weglot.initialize({
+            api_key: 'wg_4cfd8ec42cefdbccbd579d005d1001978'
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <div class="banner">
+            <img src="media/panther.png" alt="roofing buddy">
+            <h1>Pre-Site Inspection</h1>
+        </div>
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="repairs.html">Repair Forms</a></li>
+                <li><a href="installations.html">Installation Forms</a></li>
+                <li><a href="weather.html">Weather Report</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <form action="mailto:cjknutson684@students.lcstate.edu" method="post" enctype="text/plain">
+          <fieldset>
+            <legend>Change Order Form</legend>  
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required><br>
+
+            <label for="jobName">Job Name:</label>
+            <input type="text" id="jobName" name="jobName" list="jobList" required>
+            <datalist id="jobList">
+                        <!-- Import ProLine job list via API -->
+                    </datalist><br><br>
+            <label for="addLayers">Additional T/O Layers:</label>
+            <!-- Convert these labels into a table -->
+            <table>
+                <tr>
+                    <th>Layer</th>
+                    <th>Hand-Loaded?</th>
+                    <th>RoofScope Sections</th>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" id="addLayers" name="addLayers" value="2nd">2nd
+                    </td>
+                    <td>
+                        <input type="checkbox" id="handLoaded" name="handLoaded" value="Yes">Yes
+                    </td>
+                    <td>
+                        <input type="text" id="sections" name="sections">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" id="addLayers" name="addLayers" value="3rd">3rd
+                    </td>
+                    <td>
+                        <input type="checkbox" id="handLoaded" name="handLoaded" value="Yes">Yes
+                    </td>
+                    <td>
+                        <input type="text" id="sections" name="sections">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" id="addLayers" name="addLayers" value="4th">4th
+                    </td>
+                    <td>
+                        <input type="checkbox" id="handLoaded" name="handLoaded" value="Yes">Yes
+                    </td>
+                    <td>
+                        <input type="text" id="sections" name="sections">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" id="addLayers" name="addLayers" value="5th">5th
+                    </td>
+                    <td>
+                        <input type="checkbox" id="handLoaded" name="handLoaded" value="Yes">Yes
+                    </td>
+                    <td>
+                        <input type="text" id="sections" name="sections">
+                    </td>
+                </tr>
+            </table>
+            <label for="plywood">Plywood Installation:</label>
+            <table>
+                <tr>
+                    <th>Size</th>
+                    <th>Sections</th>
+                    <th># of Sheets</th>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" id="plywood" name="plywood" value="7/16">7/16
+                    </td>
+                    <td>
+                        <input type="text" id="sections" name="sections">
+                    </td>
+                    <td>
+                        <input type="number" id="sheets" name="sheets">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" id="plywood" name="plywood" value="1/2">1/2
+                    </td>
+                    <td>
+                        <input type="text" id="sections" name="sections">
+                    </td>
+                    <td>
+                        <input type="number" id="sheets" name="sheets">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" id="plywood" name="plywood" value="5/8">5/8
+                    </td>
+                    <td>
+                        <input type="text" id="sections" name="sections">
+                    </td>
+                    <td>
+                        <input type="number" id="sheets" name="sheets">
+                    </td>
+                </tr>
+            </table>
+            <label for="otherWood">Wood Replacement:</label>
+            <table>
+                <tr>
+                    <th>Type</th>
+                    <th>Size</th>
+                    <th>Sections</th>
+                    <th>LNFT</th>
+                </tr>
+                <tr>
+                    <td>
+                        <select name="woodType" id="woodType">
+                            <option value="Fascia">Fascia</option>
+                            <option value="Subfascia">Subfascia</option>
+                            <option value="Deck Board">Deck Board</option>
+                        </select>
+                    </td>
+                    <td>
+                        <input type="text" id="size" name="size">
+                    </td>
+                    <td>
+                        <input type="text" id="sections" name="sections">
+                    </td>
+                    <td>
+                        <input type="number" id="lnft" name="lnft">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <select name="woodType" id="woodType">
+                            <option value="Subfascia">Subfascia</option>
+                            <option value="Deck Board">Deck Board</option>
+                            <option value="Fascia">Fascia</option>
+                        </select>
+                    </td>
+                    <td>
+                        <input type="text" id="size" name="size">
+                    </td>
+                    <td>
+                        <input type="text" id="sections" name="sections">
+                    </td>
+                    <td>
+                        <input type="number" id="lnft" name="lnft">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <select name="woodType" id="woodType">
+                            <option value="Deck Board">Deck Board</option>
+                            <option value="Subfascia">Subfascia</option>
+                            <option value="Fascia">Fascia</option>
+                        </select>
+                    </td>
+                    <td>
+                        <input type="text" id="size" name="size">
+                    </td>
+                    <td>
+                        <input type="text" id="sections" name="sections">
+                    </td>
+                    <td>
+                        <input type="number" id="lnft" name="lnft">
+                    </td>
+                </tr>
+            </table>
+          </fieldset>
+        </form>
+    </main>
